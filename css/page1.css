@@ -4,6 +4,21 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #E8E8E8;
 }
+.search .form-control {
+    padding-left: 34px;
+}
+
+.search .m-glass {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.square{
+  border-radius: 0 !important;
+}
+
 .menu{
     margin-top:150px;
 }
