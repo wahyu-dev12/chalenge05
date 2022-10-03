@@ -7,25 +7,195 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/page1.css">
 
-    <title>Hello, world!</title>
+    <title>Page1</title>
   </head>
   <body>
       <!-- navbar -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light fixed-top shadow-sm p-3 mb-5 bg-body rounded ">
         <div class="container-fluid">
           <div class="container d-flex  ">
             <a class="navbar-brand " href="#"><img src="./aset/image/Rectangle 62logo.png" alt="" class=""></a>
+            
             <form class="d-flex " style="padding-left: 500px;">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              <img src="./aset/image/Ellipse 1profil.png" alt="" class="ps-5">
-              <h6 class="pt-2 ps-2">Unis Badri</h6>
+            </form>
+              <!-- <img src="./aset/image/Ellipse 1profil.png" alt="" class="profil ps-5" > -->
+              <div class="profil round" >
+                <h5 class="profilName fw-bold">U</h5>
+              </div>
+              <h6 class="pt-3 ps-2">Unis Badri</h6>
+              
           </div>
         </div>
       </nav>
       <!-- navbar tutup -->
+
+
+
+      <!-- left navbar -->
+      <div class="left d-flex fixed-top ">
+        <div class="biru fixed-top" style="width: 80px; height: 750px; background-color: blue; position: relative; margin-top: -62px;">
+          <div class="menu">
+            <div class="home">
+              <img src="./aset/image/home.png" alt="" style="width: 60px;  padding-left: 20px;">
+            <h5 class="ps-2" style="color: white;">Home</h5>
+            </div>
+            <div class="ListCar mt-5">
+              <img src="./aset/image/icon mobil.png" alt="" style="width: 60px;  padding-left: 20px;">
+              <h5 class="ps-3" style="color: white;">Cars</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="putih " style="width: 200px; height: 688px; background-color: white; position: relative; margin-top: 76px;"><br><br>
+          <h4 class="car pt-2 ps-3 fw-bold" style="padding-top: 20px; color: darkgray;">CARS</h4>
+          <h4 class="ps-3 pt-3" style="background-color: beige; padding: 10px;">List Car</h4>
+
+        </div>
+      </div>
+      <!-- left nvabar tutup -->
+
+
+
+      <!-- content -->
+      <div class="content">
+        <div class="list d-flex">
+          <h6 class="TulisanCars">Cars  ></h6>
+          <h6 class="TulisanList ps-2"> List Car</h6>
+        </div>
+        <div class="pilihan">
+          <h5 class="pt-3 fw-bold"> List Car</h5>
+          <div class="button d-flex mt-3">
+            <button type="button" class="btn btn-outline-secondary ">All</button>
+            <button type="button" class="btn btn-outline-secondary mx-3">Small</button>
+            <button type="button" class="btn btn-outline-secondary">Medium</button>
+            <button type="button" class="btn btn-outline-secondary mx-3">large</button>
+            <a class="btn btn-primary" href="page2.html" role="button" > +  Add New Car</a>
+          </div>
+          <div class="daftar mt-5" >
+            <div class="lineOne" style="display: flex;">
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 20px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lineTwo mt-4" style="display: flex;">
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 20px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="lineThree mt-4" style="display: flex;">
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 30px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; margin-right: 20px;">
+                <img src="aset/image/mobil.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">Nama/Tipe Mobil</p>
+                  <h5 class="card-text fw-bold">Rp. 430.000/Hari</h5>
+                  <p>Update At 4 April 2022, 09.00</p>
+                  <div class="link d-flex">
+                    <a href="" class="btn btn-outline-danger"> <img src="./aset/image/hapus.png" alt=""> Delete</a>
+                    <a href="" class="btn btn-success"><img src="./aset/image/edit.png" alt=""> Edit</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content tutup -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

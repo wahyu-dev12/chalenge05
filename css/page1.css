@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: lightgrey;
+}
+.menu{
+    margin-top:150px;
+}
+.home:hover{
+    background-color: grey;
+
+}
+.ListCar:hover{
+    background-color: grey;
+}
+
+.profil{
+    width:50px;
+    height:50px;
+    background-color:grey;
+    border-radius: 25px;
+    margin-left:40px;
+
+}
+.profilName{
+    text-align: center;
+    padding-top:10px;
+
+    
+}
+.car{
+    font-family: Poppins 300 ;
+}
+.TulisanList{
+    color:grey;
+}
+
+.content{
+    margin-left: 320px; 
+    margin-top: 100px;
+}
+
+.btn-primary{
+    margin-left: 440px;
+}
+.btn-outline-danger{
+    width: 120px;
+    margin-right:10px;
+}
+.btn-success{
+    width: 120px;
+}
