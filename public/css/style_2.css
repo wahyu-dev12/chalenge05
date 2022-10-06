@@ -46,7 +46,7 @@ span {
 
 .bg-binar>.container {
     position: relative;
-    left: 80px;
+    left: 60px;
 }
 
 .bg-binar-light {
@@ -300,3 +300,37 @@ a {
     align-items: center;
     gap: 2px;
 }
+
+.nav-icon-mid{
+    padding-bottom: 18px;
+}
+
+/*search*/
+
+.search .form-control {
+    padding-left: 34px;
+}
+
+.search .m-glass {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 12px;
+    color: #aaa;
+}
+
+.square{
+  border-radius: 0 !important;
+}
+
+/*Nav top*/
+
+.list-car{
+    background-color: #CFD4ED;
+}
+
+.truck {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* .nav-logo{
+    back
+} */

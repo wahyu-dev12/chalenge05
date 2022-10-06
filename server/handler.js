@@ -18,6 +18,12 @@ const showCreateLayout = (req, res) => {
     res.render('create')
 }
 
+const showupdateLayout = (req, res) => {
+    // 'create' diambil dari nama file didalam directory views
+    res.render('update')
+}
+
+
 const showUpdateLayout = (req, res) => {
     Cars.findOne({
         where: { id: req.params.id }
@@ -104,6 +110,7 @@ module.exports = {
     showIndexLayout,
     showCreateLayout,
     showUpdateLayout,
+    showupdateLayout,
     processCreating,
     processUpdating,
     processDeleting,

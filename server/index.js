@@ -10,7 +10,7 @@ const app = express()
 const PORT = process.env.PORT || 8081
 
 // mengarahkan directory views didalam directory public
-app.set('views', path.join(__dirname, '../public/views'))
+// app.set('views', path.join(__dirname, '../public/views'))
 app.set('view engine', 'ejs')
 
 app.use(methodOverride('_method'))
