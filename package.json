@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/wahyu-dev12/chalenge05#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "method-override": "^3.0.0",

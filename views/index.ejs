@@ -68,6 +68,18 @@
     <!--Container Main start-->
     <div class="bg-binar" style="margin-left: 100px;">
         <div class="container py-4">
+            <% if (msg !== "Success") { %>
+                <% if (msg.includes("deleted")) {%>
+                    <div class="alert alert-danger text-center" role="alert">
+                        <%= msg %>
+                    </div>
+                <% } else { %>
+                    <div class="alert alert-success text-center" role="alert">
+                        <%= msg %>
+                    </div>
+                <% } %>
+                    <meta http-equiv="refresh" content="2;url=/">
+            <% } %> 
             <nav style="
               --bs-breadcrumb-divider: url(
                 &#34;data:image/svg + xml,
@@ -109,14 +121,42 @@
                             <div class="d-flex gap-2 mt-5">
                                 <div class="w-50 ">
                                     <form action="/delete?_method=DELETE" method="POST">
-                                        <button  type="submit" onclick="confirm('Yes')" class="py-3  btn btn-outline-danger btn-binar-danger d-flex align-items-center justify-content-center gap-1 w-100 " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <button type="button" class="py-3  btn btn-outline-danger btn-binar-danger d-flex align-items-center justify-content-center gap-1 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= car.id %>">
+                                            <img src="/images/fi_trash-2.svg"/>Hapus
+                                        </button>
+                                    <div class="modal fade" id="staticBackdrop<%= car.id %>" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="width: 387px;">
+                                            <div class="modal-content p-4">
+                                                <div class="modal-body ">
+                                                    <div class="d-flex flex-column gap-3 text-center">
+                                                        <image class="mx-auto" src="images/img-BeepBeep.svg"
+                                                            height="121px" />
+                                                        <div class="fw-bolder">Menghapus Data Mobil</div>
+                                                        <div class="fw-light">
+                                                            Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin
+                                                            ingin menghapus?
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer mx-auto border-0">
+                                                    <input type="hidden" name="id" value="<%= car.id %>">
+                                                    <input type="hidden" name="image" value="<%= car.image %>">
+                                                    <button id="deleteButton" type="submit"
+                                                        class="btn btn-binar-primary">Ya</button>
+                                                    <button type="button" class="btn btn-binar-outlined-primary"
+                                                        data-bs-dismiss="modal">Tidak</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- <button  type="button" class="py-3  btn btn-outline-danger btn-binar-danger d-flex align-items-center justify-content-center gap-1 w-100 " data-bs-toggle="modal" id="#staticBackdrop<%= car.id %>">
                                             <img src="/images/fi_trash-2.svg"/>
                                             Delete
                                         </button>
-                                        <input type="hidden" name="id" value="<%= car.id %>">
-                                        <input type="hidden" name="image" value="<%= car.image %>">
                                         
-                                        <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal fade" id="staticBackdrop<%= car.id %>" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" style="width: 387px;">
                                                 <div class="modal-content p-4">
                                                     <div class="modal-body ">
@@ -129,8 +169,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer mx-auto border-0">
-                                                            <input type="text" name="id" value="<%= car.id %>">
-                                                            <input type="text" name="image" value="<%= car.image %>">
+                                                            <input type="hidden" name="id" value="<%= car.id %>">
+                                                            <input type="hidden" name="image" value="<%= car.image %>">
                                                             <button id="deleteButton" type="submit" class="btn btn-binar-primary">Ya</button>
                                                         <button type="button" class="btn btn-binar-outlined-primary" data-bs-dismiss="modal">Tidak</button>
                                                     </div>

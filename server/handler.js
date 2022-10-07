@@ -3,10 +3,18 @@ const { Cars } = require('../models')
 const fs = require('fs')
 
 const showIndexLayout = (req, res) => {
+    const msgDelete = req.cookies.deleted
     Cars.findAll().then(cars => {
-        // 'index' diambil dari nama file didalam directory views
+        if (msgDelete) {
+            res.clearCookie("deleted");
+            return res.render('index', {
+                msg: msgDelete,
+                status: 200,
+                cars
+            })
+        }
         res.render('index', {
-            msg: "success get all data",
+            msg: "Success",
             status: 200,
             cars
         })
@@ -45,6 +53,7 @@ const processCreating = (req, res) => {
             size: req.body.size,
             image: url
         }).then(() => {
+            res.cookie("deleted", "Data has been created")
             res.status(201).redirect('/')
         })
     } catch (err) {
@@ -97,6 +106,7 @@ const processDeleting = (req, res) => {
             }
             console.log('File has been deleted')
         })
+        res.cookie("deleted", "Data has been deleted")
         res.redirect('/')
     }).catch(err => {
         res.status(422).json({
